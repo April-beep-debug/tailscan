@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    background: linear-gradient(135deg, #5CE1E6 0%, #FF9F6B 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    min-height: 100vh;
+    color: #333;
+}
+
+/* Header */
+.header {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1220px;
+    padding: 18px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(14px);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.08);
+}
+
+.logo img {
+    width: 55px;
+}
+
+.logo h1 {
+    font-size: 29px;
+    font-weight: 700;
+    background: linear-gradient(90deg, #FF6A3D, #FFB800);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 1px;
+}
+
+/* Navbar */
+.navbar ul {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 10px 18px;
+    transition: all 0.3s ease;
+    position: relative;
+    border-radius: 30px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.navbar a:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-3px);
+}
+
+/* Hero */
+.hero {
+    padding: 130px 50px 110px;
+    max-width: 1100px;
+    width: 90%;
+    margin: 40px auto;
+    border-radius: 32px;
+    color: #ffffff;
+    background: linear-gradient(135deg, rgba(255, 106, 61, 0.65), rgba(0, 201, 183, 0.65)), 
+                url("../img/descarga (6).jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255,180,100,0.25), transparent);
+    z-index: 1;
+    border-radius: 32px;
+}
+
+.hero > * {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 46px;
+    margin-bottom: 24px;
+    font-weight: 700;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.5);
+    border-left: 7px solid #FFB800;
+    padding-left: 25px;
+}
+
+.hero p {
+    font-size: 18.5px;
+    margin-bottom: 22px;
+    max-width: 720px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.45);
+}
+
+/* Botones */
+.buttons {
+    margin-top: 25px;
+}
+
+.btn-primary, .btn-secondary {
+    margin: 10px 12px 10px 0;
+    border-radius: 50px;
+    font-size: 16.5px;
+    font-weight: 600;
+    padding: 14px 34px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-primary {
+    background: #FF6A3D;
+    color: white;
+    border: 2px solid #FF6A3D;
+}
+
+.btn-primary:hover {
+    background: #FF4F1F;
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 15px 35px rgba(255, 106, 61, 0.4);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid #ffffff;
+}
+
+.btn-secondary:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateY(-5px) scale(1.05);
+    border-color: #FFB800;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .navbar ul {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .hero {
+        padding: 80px 30px;
+        margin: 20px auto;
+    }
+    
+    .hero h2 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero button {
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin: 12px auto;
+    }
+}
+
+html { scroll-behavior: smooth; }
