@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Tarjeta QR</title>
+    <link rel="stylesheet" href="../assets/css/form-styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>🐾 Tarjeta QR para Mascotas</h1>
+    </header>
+
+    <form id="registroForm">
+        <label for="dueno">Nombre del Dueño</label>
+        <input type="text" id="dueno" placeholder="Ej: María González" required>
+
+        <label for="mascota">Nombre de la Mascota</label>
+        <input type="text" id="mascota" placeholder="Ej: Luna" required>
+
+        <label for="telefono">Teléfono de Contacto</label>
+        <input type="tel" id="telefono" placeholder="Ej: +34 612 345 678" required>
+
+        <label for="imagen">Foto de referencia</label>
+        <input type="file" id="imagen" accept="image/*">
+
+        <div id="preview">Vista previa de la foto</div>
+
+        <button type="button" id="crearQR">Generar Tarjeta QR</button>
+
+        <div id="qr"></div>
+    </form>
+
+    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+    <script src="../assets/js/form.js"></script>
+</body>
+</html>
+</body>
+</html>
